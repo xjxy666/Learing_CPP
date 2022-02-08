@@ -29,7 +29,7 @@ public:
 class Computer
 {
 public:
-	Computer(CPU* cpu,VideoCard* vc,Memory* mem);
+	Computer(CPU* cpu, VideoCard* vc, Memory* mem);
 	//提供析构函数 释放三个电脑零件
 	~Computer();
 
@@ -122,7 +122,7 @@ void test01() {
 	Computer* computer1 = new Computer(intelCPU, intelCard, intelMem);
 	computer1->work();
 	delete computer1;
-	
+
 	//创建第二台电脑
 	Computer* computer2 = new Computer(new LenovoCPU, new LenovoVideo, new LenovoMemory);
 	computer2->work();

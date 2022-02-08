@@ -23,7 +23,7 @@ Base::~Base()
 {
 	cout << "BaseÎö¹¹º¯Êı" << endl;
 }
-class Son:public Base 
+class Son :public Base
 {
 public:
 	Son();
@@ -54,7 +54,7 @@ void test01() {
 
 	cout << Son::m_A << endl;
 	cout << Son::Base::m_A << endl;
-	//cout << Son::m_B << endl;
+	cout << Son::m_B << endl;
 }
 int main() {
 	test01();

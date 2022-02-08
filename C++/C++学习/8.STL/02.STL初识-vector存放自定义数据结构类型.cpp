@@ -8,7 +8,7 @@ using namespace std;
 class Person
 {
 public:
-	Person(string name,int age) {
+	Person(string name, int age) {
 		this->m_Name = name;
 		this->m_Age = age;
 	}
@@ -34,7 +34,7 @@ void test01() {
 
 	//遍历容器中的数据
 	for (vector<Person> ::iterator it = v.begin(); it != v.end(); it++) {
-		cout << "姓名：" << (*it).m_Name  <<" 年龄：" <<(*it).m_Age << endl;
+		cout << "姓名：" << (*it).m_Name << " 年龄：" << (*it).m_Age << endl;
 		cout << "姓名：" << it->m_Name << " 年龄：" << it->m_Age << endl;
 
 	}

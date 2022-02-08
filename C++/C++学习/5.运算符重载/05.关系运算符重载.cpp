@@ -27,7 +27,7 @@ Person::Person()
 {
 }
 
-Person::Person(string name, int age):m_Name(name),m_Age(age)
+Person::Person(string name, int age) :m_Name(name), m_Age(age)
 {
 }
 
