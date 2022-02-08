@@ -1,0 +1,24 @@
+class Solution {
+public:
+    bool isValid(string s) {
+        int n = s.size();
+        if(n%2==1) return false;
+        unordered_map<char,char> pairs = {
+            {')','('},
+            {'}','{'},
+            {']','['},
+        };
+        stack<char> stk;
+        for(char ch:s){ //在S里遍历ch
+            if(pairs.count(ch)){ //返回的是被查找元素的个数。找Key
+                                 //如果有，返回1；否则，返回0
+                if(stk.empty() || stk.top() != pairs[ch]){ //栈顶元素和key对应值判断
+                    return false;
+                }
+                stk.pop();//左括号都进栈，遇到右括号后出栈
+            }
+            else stk.push(ch);//左括号均不为key值，全部入栈
+        }
+        return stk.empty();//右括号不入栈
+    }
+};

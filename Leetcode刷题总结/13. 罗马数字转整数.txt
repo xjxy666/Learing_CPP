@@ -1,0 +1,31 @@
+class Solution {
+private:
+    unordered_map<char,int> symbolValues = {
+        {'I',1},
+        {'V',5},
+        {'X',10},
+        {'L',50},
+        {'C',100},
+        {'D',500},
+        {'M',1000},
+    };
+
+public:
+    int romanToInt(string s) {
+        int ans = 0;
+        int n = s.length();
+        for(int i=0;i<n;i++){
+            int value = symbolValues[s[i]];
+            if(i<n-1 && symbolValues[s[i]]<symbolValues[s[i+1]]){
+                ans -= value;
+            }
+            else{
+                ans += value;
+            }
+        }
+        return ans;
+    }
+};
+
+
+哈希表有自己的一个顺序，然后每一个罗马数字对应一个数字，如果小的位数在大的位数左边，那么结果就是右减左，如果左边是大的字母，右边是小的字母，那么就相加

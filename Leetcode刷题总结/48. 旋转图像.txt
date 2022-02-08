@@ -1,0 +1,13 @@
+class Solution {
+public:
+    void rotate(vector<vector<int>>& matrix) {
+        int len = matrix.size();
+        auto matrixTemp = matrix;
+        for(auto i = 0 ; i < len;i++){
+            for(auto j = 0; j < len;j++){
+                matrixTemp[j][len-1-i] = matrix[i][j];
+            }
+        }
+        matrix = matrixTemp;
+    }
+};
