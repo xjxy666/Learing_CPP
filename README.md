@@ -1,1 +1,4 @@
-# Learing_CPP
+# Learning_CPP
+--
+这此仓库保存学习C++以来的练习代码及案例
+内容大致如下
